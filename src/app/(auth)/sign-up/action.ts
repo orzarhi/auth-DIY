@@ -2,7 +2,7 @@
 
 import { db } from "@/db";
 import { FormState, SignupFormSchema } from "@/lib/definitions";
-import { createSession } from "@/lib/session";
+import { createSession } from "@/lib/database-session";
 import bcrypt from 'bcrypt';
 
 export async function signUp(
