@@ -1,4 +1,4 @@
-import { LoginForm } from './form';
+import { SignInForm } from './form';
 import Link from 'next/link';
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
                 </p>
             </div>
             <div className="mt-6">
-                <LoginForm />
+                <SignInForm />
             </div>
             <div className="mt-4 text-center text-sm">
                 Don&apos;t have an account?{' '}

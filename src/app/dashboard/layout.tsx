@@ -2,12 +2,11 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PackageIcon } from '@/components/ui/icons';
 import { Input } from '@/components/ui/input';
-import Image from 'next/image';
 import Link from 'next/link';
 
-import LogoutButton from './logout-button';
 import { getUser } from '@/lib/getUser';
 import { User } from 'lucide-react';
+import LogoutButton from './logout-button';
 
 const navLinks = [
     { title: 'Home', href: '/dashboard', badge: 0 },

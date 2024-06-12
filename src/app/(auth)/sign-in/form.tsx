@@ -3,12 +3,12 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { login } from '@/lib/actions';
+import { signIn } from './action';
 import Link from 'next/link';
 import { useFormState, useFormStatus } from 'react-dom';
 
-export function LoginForm() {
-    const [state, action] = useFormState(login, undefined);
+export function SignInForm() {
+    const [state, action] = useFormState(signIn, undefined);
 
     return (
         <form action={action}>

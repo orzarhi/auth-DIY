@@ -7,7 +7,6 @@ import {
     CardTitle,
 } from '@/components/ui/card';
 import { Truck } from 'lucide-react';
-import Image from 'next/image';
 
 export default function Page() {
     const orders = [
