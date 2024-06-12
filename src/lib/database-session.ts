@@ -4,6 +4,7 @@ import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import type { SessionPayload } from './definitions';
 import { db } from '@/db';
+import { redirect } from 'next/navigation';
 
 const secretKey = process.env.SECRET;
 const key = new TextEncoder().encode(secretKey);
@@ -50,4 +51,6 @@ export async function createSession(id: number) {
         sameSite: 'lax',
         path: '/',
     });
+
+    redirect('/dashboard');
 }

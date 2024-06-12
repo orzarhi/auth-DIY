@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 import LogoutButton from './logout-button';
 import { getUser } from '@/lib/getUser';
+import { User } from 'lucide-react';
 
 const navLinks = [
     { title: 'Home', href: '/dashboard', badge: 0 },
@@ -70,7 +71,7 @@ export default async function Layout({
                         <PackageIcon className="h-6 w-6" />
                         <span className="sr-only">Home</span>
                     </Link>
-                    <h1 className="md:blobk hidden text-lg font-semibold">Dashboard</h1>
+                    <h1 className="md:block hidden text-lg font-semibold">Dashboard</h1>
                     <div className="ml-auto flex items-center gap-4">
                         <form>
                             <div className="relative">
@@ -82,17 +83,7 @@ export default async function Layout({
                             </div>
                         </form>
                         <Button className="rounded-full" size="icon" variant="ghost">
-                            <Image
-                                alt="Avatar"
-                                className="rounded-full"
-                                height="32"
-                                src="/placeholder.svg"
-                                style={{
-                                    aspectRatio: '32/32',
-                                    objectFit: 'cover',
-                                }}
-                                width="32"
-                            />
+                            <User />
                             <span className="sr-only">View profile</span>
                         </Button>
                     </div>

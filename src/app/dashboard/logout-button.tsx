@@ -1,3 +1,5 @@
+'use client'
+
 import { logout } from "@/lib/actions";
 import { LogOutIcon } from "lucide-react";
 

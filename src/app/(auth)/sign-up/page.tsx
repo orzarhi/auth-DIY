@@ -13,8 +13,8 @@ export default function Page() {
             </div>
             <div className="mt-6 text-center text-sm">
                 Already have an account?{' '}
-                <Link className="underline" href="/login">
-                    Login
+                <Link className="underline" href="/sign-in">
+                    Sign in
                 </Link>
             </div>
         </div>
