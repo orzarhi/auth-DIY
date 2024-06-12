@@ -4,7 +4,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { useFormState, useFormStatus } from 'react-dom';
-import { signUp } from './action';
+import { signUp } from '../../../lib/actions';
 
 export function SignUpForm() {
     const [state, action] = useFormState(signUp, undefined);
