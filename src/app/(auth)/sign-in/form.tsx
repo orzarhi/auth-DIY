@@ -50,8 +50,12 @@ export function LoginButton() {
     const { pending } = useFormStatus();
 
     return (
-        <Button aria-disabled={pending} type="submit" className="mt-4 w-full">
-            {pending ? 'Submitting...' : 'Sign up'}
+        <Button
+            aria-disabled={pending}
+            type="submit" className="mt-4 w-full"
+            disabled={pending}
+        >
+            {pending ? 'Submitting...' : 'Sign in'}
         </Button>
     );
 }
