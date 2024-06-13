@@ -14,7 +14,6 @@ export function SignUpForm() {
         alert(state?.message);
     }, [state])
 
-
     return (
         <form action={action}>
             <div className="flex flex-col gap-2">
