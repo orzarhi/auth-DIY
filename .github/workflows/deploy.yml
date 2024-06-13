@@ -24,6 +24,9 @@ jobs:
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
+            - name: Rebuild bcrypt
+              run: pnpm rebuild bcrypt
+
             - name: Deploy
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
