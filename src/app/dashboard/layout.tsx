@@ -72,7 +72,7 @@ export default async function Layout({
                     </Link>
                     <h1 className="md:block hidden text-lg font-semibold">Dashboard</h1>
                     <div className="ml-auto flex items-center gap-4 w-full">
-                        <div className='mx-auto'>
+                        <div className='mx-auto sm:hidden'>
                             <LogoutButton />
                         </div>
                         <Button className="rounded-full" size="icon" variant="ghost">
