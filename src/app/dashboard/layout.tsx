@@ -71,16 +71,10 @@ export default async function Layout({
                         <span className="sr-only">Home</span>
                     </Link>
                     <h1 className="md:block hidden text-lg font-semibold">Dashboard</h1>
-                    <div className="ml-auto flex items-center gap-4">
-                        <form>
-                            <div className="relative">
-                                <Input
-                                    className="bg-gray-100/60 md:w-[200px]"
-                                    placeholder="Search orders..."
-                                    type="search"
-                                />
-                            </div>
-                        </form>
+                    <div className="ml-auto flex items-center gap-4 w-full">
+                        <div className='mx-auto'>
+                            <LogoutButton />
+                        </div>
                         <Button className="rounded-full" size="icon" variant="ghost">
                             <User />
                             <span className="sr-only">View profile</span>
