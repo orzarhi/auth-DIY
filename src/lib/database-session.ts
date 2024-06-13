@@ -6,7 +6,7 @@ import type { SessionPayload } from './definitions';
 import { db } from '@/db';
 import { redirect } from 'next/navigation';
 
-const secretKey = process.env.SECRET;
+const secretKey = process.env.SECRET_KEY;
 const key = new TextEncoder().encode(secretKey);
 
 export async function encrypt(payload: SessionPayload) {
