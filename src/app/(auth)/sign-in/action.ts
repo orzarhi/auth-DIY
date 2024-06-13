@@ -3,7 +3,7 @@
 import { db } from "@/db";
 import { FormState, LoginFormSchema } from "@/lib/definitions";
 import { createSession } from "@/lib/database-session";
-import bcrypt from 'bcrypt';
+import * as argon2 from "argon2";
 
 export async function signIn(
     state: FormState,
@@ -30,10 +30,14 @@ export async function signIn(
         return errorMessage;
     }
 
-    const passwordMatch = await bcrypt.compare(
-        validatedFields.data.password,
+    const passwordMatch = await argon2.verify(
         user.password,
+        validatedFields.data.password,
     );
+    // const passwordMatch = await bcrypt.compare(
+    //     validatedFields.data.password,
+    //     user.password,
+    // );
 
 
     if (!passwordMatch) {

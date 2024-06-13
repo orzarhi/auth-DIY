@@ -3,7 +3,7 @@
 import { db } from "@/db";
 import { FormState, SignupFormSchema } from "@/lib/definitions";
 import { createSession } from "@/lib/database-session";
-import bcrypt from 'bcrypt';
+import * as argon2 from "argon2";
 
 export async function signUp(
     state: FormState,
@@ -33,7 +33,8 @@ export async function signUp(
         };
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await argon2.hash(password);
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await db.user.create({
         data: {
