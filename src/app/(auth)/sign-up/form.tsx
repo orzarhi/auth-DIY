@@ -1,18 +1,13 @@
 'use client';
 
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { useFormState, useFormStatus } from 'react-dom';
 import { signUp } from './action';
-import { useEffect } from 'react';
 
 export function SignUpForm() {
     const [state, action] = useFormState(signUp, undefined);
-
-    useEffect(() => {
-        alert(state?.message);
-    }, [state])
 
     return (
         <form action={action}>
@@ -44,6 +39,9 @@ export function SignUpForm() {
                             ))}
                         </ul>
                     </div>
+                )}
+                {state?.message && (
+                    <p className="text-sm text-red-500">{state.message}</p>
                 )}
                 <SignUpButton />
             </div>
